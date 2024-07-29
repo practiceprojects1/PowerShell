@@ -1,6 +1,6 @@
 # Define the path for the output EVTX file
-$evtxFilePath = "C:\Users\94eke\OneDrive\Desktop\EventsLastMinute.evtx"
-$csvFilePath = "C:\Users\94eke\OneDrive\Desktop\EventsLastMinute.csv"
+#$evtxFilePath = "EventsLastMinute.evtx"
+$csvFilePath = "\EventsLastMinute.csv"
 
 # Define the event log source
 $logName = "Security"  # Change to the desired log name, e.g., "System" or "Security"
