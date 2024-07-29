@@ -1,6 +1,6 @@
 # Define the path for the output EVTX file
 #$evtxFilePath = "EventsLastMinute.evtx"
-$csvFilePath = "\EventsLastMinute.csv"
+$csvFilePath = "\EventsLastMinute2.csv"
 
 # Define the event log source
 $logName = "Security"  # Change to the desired log name, e.g., "System" or "Security"
@@ -8,8 +8,9 @@ $logName = "Security"  # Change to the desired log name, e.g., "System" or "Secu
 # Get the current time
 $now = Get-Date
 
+
 # Calculate the time 1 minute ago
-$startTime = $now.AddMinutes(-1000)
+$startTime = $now.AddMinutes(-100)
 
 # Create a filter for events that occurred within the last minute
 $filter = @{
@@ -21,7 +22,7 @@ $filter = @{
 # Use Get-WinEvent to query events from the log
 try {
     # Query the events
-    $events = Get-WinEvent #-FilterHashtable $filter
+    $events = Get-WinEvent -FilterHashtable $filter
 
     # Check if any events were retrieved
     if ($events) {
