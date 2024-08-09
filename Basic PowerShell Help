@@ -1,0 +1,38 @@
+## Find all commands
+Get-Command
+
+## Find all commands with the verb Get by passing a parameter
+Get-Command -Verb Get
+
+## Limit commands further by all commands with a verb of Get and a noun of Service
+Get-Command -Verb Get -Noun Service
+
+## Run Get-Service to find all services on the local system
+Get-Service
+
+## Limit services down to a single service using the Name parameter
+Get-Service -Name wuauserv
+
+## Running Get-Help on it's own
+Get-Help
+
+## Running Get-Help for a specific command
+Get-Help -Name Get-Service
+
+## Finding all available examples for the Get-Service cmdlet
+Get-Help -Name Get-Service -Examples
+
+## General topics (about topics)
+Get-Help about_Core_Commands
+
+## Using wildcards (wildcards can typically be used to specify one or more characters)
+Get-Help -Name About*
+
+## Clearing the screen with an alias
+cls
+
+## Clearing the screen without an alias
+Clear-Host
+
+## Running Update-Help to update help content
+Update-Help
